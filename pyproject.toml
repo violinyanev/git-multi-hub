@@ -29,4 +29,4 @@ dev = ["pip-tools", "pytest"]
 Homepage = "https://github.com/violinyanev/git-multi-hub"
 
 [project.scripts]
-realpython = "gmh.__main__:main"
+gmh = "gmh.__main__:main"
