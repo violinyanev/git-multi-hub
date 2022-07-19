@@ -1,0 +1,32 @@
+# pyproject.toml
+
+[build-system]
+requires      = ["setuptools>=61.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gmh"
+version = "0.1.0"
+description = "Work with multiple Github hosts"
+readme = "README.md"
+authors = [{ name = "Violin Yanev", email = "violinyanev@users.noreply.github.com" }]
+license = { file = "LICENSE" }
+classifiers = [
+    "License :: OSI Approved :: APACHE-2.0 License",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+]
+keywords = ["github", "graphql", "enterprise"]
+dependencies = [
+    "click",
+]
+requires-python = ">=3.8"
+
+[project.optional-dependencies]
+dev = ["pip-tools", "pytest"]
+
+[project.urls]
+Homepage = "https://github.com/violinyanev/git-multi-hub"
+
+[project.scripts]
+realpython = "gmh.__main__:main"
