@@ -15,9 +15,7 @@ limitations under the License.
 
 import click
 
-# TODO Switch import style to "from ghm import xxx
-import config
-
+from gmh import config
 
 @click.group()
 def cli():
@@ -37,5 +35,9 @@ def configure():
     config.create()
 
 
+def main():
+    return cli(auto_envvar_prefix='GMH')
+
+
 if __name__ == '__main__':
-    cli(auto_envvar_prefix='GMH')
+    main()
