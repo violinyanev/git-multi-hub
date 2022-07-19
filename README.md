@@ -6,6 +6,7 @@ add shields
 add docs
 add tests
 specify better dependency versions (check pip-tools)
+Github actions to run tests, publish package
 -->
 
 Are you working with public Github alongside your Github enterprise? Do you have multiple
