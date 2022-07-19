@@ -13,8 +13,29 @@ limitations under the License.
 ------------------------------------------------------------------------------
 '''
 
-def main():
-    print ('Not implemented yet!')
+import click
 
-if '__main__' == __name__:
-    main()
+# TODO Switch import style to "from ghm import xxx
+import config
+
+
+@click.group()
+def cli():
+    """Tool for working with multiple Github hosts simultaneously
+
+    Filter only relevant PRs. Automation of trivial tasks. And more!
+    """
+    pass
+
+
+@cli.command('configure', short_help='Creates user config')
+def configure():
+    """Creates two configuration files in $HOME/.useful path. One to store interesting
+    repositories, connection settings, and custom option. And one to hold a set of
+    currently ignored (snoozed) PRs. Both files can be also modified manually.
+    """
+    config.create()
+
+
+if __name__ == '__main__':
+    cli(auto_envvar_prefix='GMH')
